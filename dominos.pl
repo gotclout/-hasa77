@@ -1,7 +1,5 @@
-use_module(library(clpfd)).
-
 playout(A, L) :- dominos_arrangement(A, L, Vs), label(Vs).
-playout(A) :- dominos_arrangement(A, As, Vs), label(Vs).
+playout(A) :- dominos_arrangement(A, _, Vs), label(Vs).
 dominos_arrangement(Ds, Solution, Vs) :-
         same_length(Ds, As),
         dominos_tuples(Ds, Ts),
